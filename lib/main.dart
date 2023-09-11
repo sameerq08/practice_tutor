@@ -22,22 +22,52 @@ class _MyAppState extends State<MyApp> {
           title: const Text('AppBar'),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SafeArea(child: Center(child: Text(x.toString()))),
-            Stack(children: [
-              Container(
+            Expanded(
+              flex: 2,
+              child: Container(
+                alignment: Alignment.bottomCenter,
                 color: Colors.red,
-                height: 100,
-                width: 100,
+                //height: 100,
+                //width: 100,
                 child: const Text('i am container 1'),
               ),
-              Container(
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
                 color: Colors.green,
-                width: 50,
-                height: 50,
-                child: const Text('i am container 1'),
               ),
-            ]),
+            ),
+            const Text('i am container 2'),
+            const Expanded(
+              child: CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.teal,
+                backgroundImage: NetworkImage(
+                    'https://t4.ftcdn.net/jpg/02/05/24/35/360_F_205243571_r9FJ3PkeQrT5uJqihOdu6yVvdtN4TkZA.jpg'),
+                //child: Icon(Icons.person),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              child: TextFormField(
+                cursorRadius: const Radius.circular(30),
+                keyboardType: TextInputType.emailAddress,
+                style: const TextStyle(fontSize: 14, color: Colors.black),
+                decoration: InputDecoration(
+                  fillColor: Colors.grey.withOpacity(0.3),
+                  filled: true,
+                  hintText: 'Email',
+                  labelText: 'Email',
+                ),
+                onChanged: (value) {
+                  print(value);
+                },
+              ),
+            )
           ],
         ),
         floatingActionButton: FloatingActionButton(
