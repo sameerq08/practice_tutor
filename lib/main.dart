@@ -61,10 +61,26 @@ class _MyAppState extends State<MyApp> {
                   fillColor: Colors.grey.withOpacity(0.3),
                   filled: true,
                   hintText: 'Email',
-                  labelText: 'Email',
+                  prefixIcon: const Icon(Icons.alternate_email),
+                  suffixIcon: const Icon(Icons.email_outlined),
+                  enabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.amber)),
                 ),
                 onChanged: (value) {
                   print(value);
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return const ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          'https://t4.ftcdn.net/jpg/02/05/24/35/360_F_205243571_r9FJ3PkeQrT5uJqihOdu6yVvdtN4TkZA.jpg'),
+                    ),
+                  );
                 },
               ),
             )
