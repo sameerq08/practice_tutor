@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_tutor/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
         drawer: Drawer(
           backgroundColor: Colors.amber,
           child: ListView(
+            padding: EdgeInsets.zero,
             children: const [
               DrawerHeader(
                 child: Text('User Profile'),
@@ -40,6 +42,18 @@ class _MyAppState extends State<MyApp> {
                       'https://miro.medium.com/v2/resize:fit:1200/0*YoNIUVJ3OC8j95tH.jpg'),
                 ),
               ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+              ),
+              ListTile(
+                leading: Icon(Icons.calendar_month),
+                title: Text('Calender'),
+              ),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Logout'),
+              )
             ],
           ),
         ),
