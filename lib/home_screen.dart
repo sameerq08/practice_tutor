@@ -22,7 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
             Text('Calls'),
           ]),
         ),
-        body: const TabBarView(children: []),
+        body: const TabBarView(children: [
+          Text('Camera'),
+          Text('Chats'),
+          Text('Status'),
+          Text('Calls'),
+        ]),
       ),
     );
   }
