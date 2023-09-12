@@ -20,6 +20,28 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('AppBar'),
+          backgroundColor: const Color(0xff764abc),
+        ),
+        drawer: Drawer(
+          backgroundColor: Colors.amber,
+          child: ListView(
+            children: const [
+              DrawerHeader(
+                child: Text('User Profile'),
+              ),
+              UserAccountsDrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color(0xff764abc),
+                ),
+                accountName: Text('Sameer'),
+                accountEmail: Text('sameer.q08@gmail.com'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://miro.medium.com/v2/resize:fit:1200/0*YoNIUVJ3OC8j95tH.jpg'),
+                ),
+              ),
+            ],
+          ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
