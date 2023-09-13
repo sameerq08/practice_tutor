@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
-          Text('Status'),
+          const Text('Status'),
           ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {
