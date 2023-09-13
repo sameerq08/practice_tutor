@@ -48,11 +48,39 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        body: const TabBarView(children: [
-          Text('Camera'),
-          Text('Chats'),
+        body: TabBarView(children: [
+          const Text('Camera'),
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return const ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://miro.medium.com/v2/resize:fit:1200/0*YoNIUVJ3OC8j95tH.jpg'),
+                ),
+                title: Text('Avaiator'),
+                subtitle: Text('Personal information'),
+                trailing: Text('6:00'),
+              );
+            },
+          ),
           Text('Status'),
-          Text('Calls'),
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://miro.medium.com/v2/resize:fit:1200/0*YoNIUVJ3OC8j95tH.jpg'),
+                ),
+                title: const Text('Caller Name'),
+                subtitle: Text(index / 2 == 0
+                    ? 'You missed Audio call'
+                    : 'Call time was 12'),
+                trailing: Icon(index / 2 == 0 ? Icons.phone : Icons.video_call),
+              );
+            },
+          ),
         ]),
       ),
     );
