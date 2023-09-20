@@ -1,6 +1,6 @@
 # practice_tutor
 
-A new Flutter project.
+A new Flutter project. Day by Day flutter training
 
 ## Getting Started
 
