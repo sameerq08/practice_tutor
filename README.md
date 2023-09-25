@@ -1,6 +1,6 @@
 # practice_tutor
 
-A new Flutter project. Day by Day flutter training for student 
+A new Flutter project. Day by Day flutter training for student for Sep
 
 ## Getting Started
 
